@@ -10,11 +10,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.testng:testng-bom:8.0.0')
-    testImplementation 'org.testng:testng:8.0.0'
-    testImplementation('io.rest-assured:rest-assured:5.3.0')
+    testImplementation("io.rest-assured:rest-assured:5.4.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
 }
 
 test {
-    useTestNG()
+    useJUnitPlatform()
 }
